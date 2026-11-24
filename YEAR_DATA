@@ -15,3 +15,15 @@ void initialiserTab(Stats stats[]){
 		tab[i].leger = 0;
 	}
 }
+
+void lire_ichier( Stats tab[]){
+	FILE *data= fopen("data.csv" , "r");
+	char ligne[1000];
+
+	int annee, gravite;
+	int id;
+	int ancien_id = -1;
+	int ancienne_annee = -1;
+
+	
+}
