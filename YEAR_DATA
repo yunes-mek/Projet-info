@@ -1,0 +1,17 @@
+typedef struct{
+  long accident;
+	long mort;
+	long indemne;
+	long grave;
+	long leger;
+}Stat;
+
+void initialiserTab(Stats stats[]){
+	for(int i = 0 ; i < 20 ; i++){
+		tab[i].accident = 0;
+		tab[i].mort = 0;
+		tab[i].indemne = 0;
+		tab[i].grave = 0;
+		tab[i].leger = 0;
+	}
+}
