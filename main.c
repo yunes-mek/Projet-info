@@ -8,7 +8,7 @@ int main() {
     while(1) {
       
         printf("\n╔════════════════════╗\n");
-        printf("║  QCM-CY-TECH       ║\n");
+        printf("║  CRASH TEST        ║\n");
         printf("╠════════════════════╣\n");
         printf("║ 1. Year Data       ║\n");
         printf("║ 2. Age Data        ║\n");
