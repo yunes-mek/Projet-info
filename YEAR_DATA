@@ -41,3 +41,38 @@ void lire_ichier( Stats tab[]){
 	}
 	fclose(data);
 }
+
+
+
+
+void afficher_stats(Stats tab[] , int annee){
+	int i = annee - 2005;
+
+	printf("\nStatistique de %d\n" , annee);
+	printf("Nombres d'accidents : %d\n" , tab[i].accidents);
+	printf("Nombre de morts :%d\n" , tab [i].mort);
+	printf("Nombre d'indemne :%d\n" , tab[i].indemne);
+	printf("Nombre de blessés graves :%d\n" , tab[i].grave);
+	printf("Nombre de blessés legers :%d\n" , tab[i].leger);
+}
+
+void menu(Stats tab[]){
+	int choix, annee;
+
+	do{
+		printf("==== CRASH TECH ====\n");
+		printf("1.Consulter une année\n");
+		printf("0.Quitter\n");
+		printf("Votre choix\");
+		scanf("%d", &choix);
+		
+		if (choix == 1){
+			printf("Entrez une année (2005-2024) : ");
+			scanf("%d" , &annee);
+
+			if(annee >= 2005 && annee <= 2024){
+				afficher_stats(tab,annee);
+			}
+		}
+	}while(choix!= 0);
+}
