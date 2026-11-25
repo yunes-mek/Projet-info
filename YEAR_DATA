@@ -20,10 +20,24 @@ void lire_ichier( Stats tab[]){
 	FILE *data= fopen("data.csv" , "r");
 	char ligne[1000];
 
-	int annee, gravite;
-	int id;
-	int ancien_id = -1;
-	int ancienne_annee = -1;
-
+	int annee,id ,vehicue, user ,location,gravite;
 	
+
+	while(fgets(ligne, 1000, data)!= NULL){
+
+		fscanf(data,"%d;%d;%d;%d;%d;%d;%d", &annee , &id , &vehicule, &location, &user, &garvite);
+		int i = annee -2005;
+		if(i >= 0 && i < 20){
+			if(gravite == 1){
+				tab[i].indemne++;
+			}else if(gravite == 2){
+				tab[i].morts++;
+			}else if(gravite == 3){
+				tab[i].graves++;
+			}else if(gravite == 4){
+				tab[i].leger++;
+			}
+		}
+	}
+	fclose(data);
 }
